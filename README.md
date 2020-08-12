@@ -1,1 +1,3 @@
 # HarbourAR
+
+Geolocative AR project
