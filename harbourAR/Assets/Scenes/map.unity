@@ -521,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
       propertyPath: _imagery._layerProperty.sourceType
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
@@ -647,7 +647,7 @@ PrefabInstance:
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
       propertyPath: _previewOptions.isPreviewEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 3}
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901995225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1323b3b079cb480e8ae34f62cd2c8d1, type: 3}
+  m_Script: {fileID: 11500000, guid: eff1dfc56205f4211bd165544c2f527f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1901995228
