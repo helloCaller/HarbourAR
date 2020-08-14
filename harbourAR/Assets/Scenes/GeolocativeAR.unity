@@ -202,7 +202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210, y: 23}
+  m_AnchoredPosition: {x: -393, y: 23}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &48675605
@@ -639,7 +639,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.3678216e-29, y: 0, z: 0, w: 2.8e-44}
+  m_BoundingSphereOverride: {x: 0, y: -1.0569408e+22, z: 4.5915e-41, w: 3.5e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -780,7 +780,7 @@ MonoBehaviour:
         Altitude: 0
         AltitudeMode: 0
   HotspotSettings:
-    Prefab: {fileID: 8249562779800224532, guid: 3ec4b0ed583ce44f48b1abb91c5149d8,
+    Prefab: {fileID: 6211779150993235216, guid: ca07f411eec51443797f21420efabe7e,
       type: 3}
     PositionMode: 1
     ActivationRadius: 10
@@ -1600,7 +1600,7 @@ MonoBehaviour:
         Altitude: 0
         AltitudeMode: 0
   HotspotSettings:
-    Prefab: {fileID: 2099115162467779959, guid: c47d301ea0fad4e8999b80e4a339a3c1,
+    Prefab: {fileID: 6337577890333874876, guid: a5b64defef49c401bb4b792c213121a8,
       type: 3}
     PositionMode: 1
     ActivationRadius: 12
