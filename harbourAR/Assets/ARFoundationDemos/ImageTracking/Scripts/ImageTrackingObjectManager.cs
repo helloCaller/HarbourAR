@@ -32,24 +32,20 @@ public class ImageTrackingObjectManager : MonoBehaviour
     }
 
 
-
-
-
-
 	[SerializeField]
 	[Tooltip("Prefab for tracked 1 image")]
 	GameObject m_OnePrefab;
 
-	/// <summary>
-	/// Get the one prefab
-	/// </summary>
-	public GameObject onePrefab
-	{
-		get => m_OnePrefab;
-		set => m_OnePrefab = value;
-	}
+  /// <summary>
+  /// Get the one prefab
+  /// </summary>
+  public GameObject onePrefab
+  {
+    get => m_OnePrefab;
+    set => m_OnePrefab = value;
+  }
 
-	GameObject m_SpawnedOnePrefab;
+  GameObject m_SpawnedOnePrefab;
 
 	/// <summary>
 	/// get the spawned one prefab
@@ -85,7 +81,7 @@ public class ImageTrackingObjectManager : MonoBehaviour
 	}
 
 	[SerializeField]
-	[Tooltip("Prefab for tracked 1 image")]
+	[Tooltip("Prefab for tracked 3 image")]
 	GameObject m_ThreePrefab;
 
 	/// <summary>
@@ -132,37 +128,64 @@ public class ImageTrackingObjectManager : MonoBehaviour
 		set => m_SpawnedFourPrefab = value;
 	}
 
-	int m_NumberOfTrackedImages;
 
-	private GameObject[] Prefabs;
+  [SerializeField]
+  [Tooltip("Prefab for tracked 1 image")]
+  GameObject m_WallPrefab;
+
+  /// <summary>
+  /// Get the one prefab
+  /// </summary>
+  public GameObject WallPrefab
+  {
+    get => m_WallPrefab;
+    set => m_WallPrefab = value;
+  }
+
+  GameObject m_SpawnedWallPrefab;
+
+  /// <summary>
+  /// get the spawned one prefab
+  /// </summary>
+  public GameObject spawnedWallPrefab
+  {
+    get => m_SpawnedWallPrefab;
+    set => m_SpawnedWallPrefab = value;
+  }
+
+  int m_NumberOfTrackedImages;
+
 
 	NumberManager m_OneNumberManager;
 	NumberManager m_TwoNumberManager;
 	NumberManager m_ThreeNumberManager;
 	NumberManager m_FourNumberManager;
+  NumberManager m_WallNumberManager;
 
-	static Guid s_FirstImageGUID;
+  static Guid s_FirstImageGUID;
 	static Guid s_SecondImageGUID;
 	static Guid s_ThirdImageGUID;
 	static Guid s_FourthImageGUID;
+  static Guid s_WallImageGUID;
 
-	//private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
+
+ 
 
 
-	void OnEnable()
+  void OnEnable()
     {
 		s_FirstImageGUID = m_ImageLibrary[0].guid;
 		s_SecondImageGUID = m_ImageLibrary[1].guid;
 		s_ThirdImageGUID = m_ImageLibrary[2].guid;
 		s_FourthImageGUID = m_ImageLibrary[3].guid;
-		Guid[] guids = { s_FirstImageGUID, s_SecondImageGUID, s_ThirdImageGUID, s_FourthImageGUID };
-		GameObject[] Prefabs = { m_OnePrefab, m_TwoPrefab, m_ThreePrefab, m_FourPrefab };
+    s_WallImageGUID = m_ImageLibrary[4].guid;
 
 
 
 
 
-		m_ImageManager.trackedImagesChanged += ImageManagerOnTrackedImagesChanged;
+
+    m_ImageManager.trackedImagesChanged += ImageManagerOnTrackedImagesChanged;
     }
 
     void OnDisable()
@@ -200,68 +223,79 @@ public class ImageTrackingObjectManager : MonoBehaviour
 				m_SpawnedFourPrefab = Instantiate(m_FourPrefab, image.transform.position, image.transform.rotation);
 				m_FourNumberManager = m_SpawnedFourPrefab.GetComponent<NumberManager>();
 			}
+      else if (image.referenceImage.guid == s_WallImageGUID)
+      {
+        m_SpawnedWallPrefab = Instantiate(m_WallPrefab, image.transform.position, image.transform.rotation);
+        m_WallNumberManager = m_SpawnedWallPrefab.GetComponent<NumberManager>();
+      }
 
-		}
+    }
 
 	// updated, set prefab position and rotation
 	foreach (ARTrackedImage image in obj.updated)
 	{
 			Debug.Log(image.trackingState);
-			print(image.trackingState);
+			
 		// image is tracking or tracking with limited state, show visuals and update it's position and rotation
 		if (image.trackingState == TrackingState.Tracking)
 		{
 
 				if (image.referenceImage.guid == s_FirstImageGUID)
 				{
-					m_OneNumberManager.Enable3DNumber(true);
+					m_OneNumberManager.EnableARVideoObj(true);
 					m_SpawnedOnePrefab.transform.SetPositionAndRotation(image.transform.position, image.transform.rotation);
 
 				}
 				else if (image.referenceImage.guid == s_SecondImageGUID)
 				{
-					m_TwoNumberManager.Enable3DNumber(true);
+					m_TwoNumberManager.EnableARVideoObj(true);
 					m_SpawnedTwoPrefab.transform.SetPositionAndRotation(image.transform.position, image.transform.rotation);
 					
 				}
 				else if (image.referenceImage.guid == s_ThirdImageGUID)
 				{
-					m_ThreeNumberManager.Enable3DNumber(true);
+					m_ThreeNumberManager.EnableARVideoObj(true);
 					m_SpawnedThreePrefab.transform.SetPositionAndRotation(image.transform.position, image.transform.rotation);
 				}
 				else if (image.referenceImage.guid == s_FourthImageGUID)
 				{
-					m_FourNumberManager.Enable3DNumber(true);
+					m_FourNumberManager.EnableARVideoObj(true);
 					m_SpawnedFourPrefab.transform.SetPositionAndRotation(image.transform.position, image.transform.rotation);
 				}
-			}
+        else if (image.referenceImage.guid == s_WallImageGUID)
+        {
+          m_WallNumberManager.EnableARVideoObj(true);
+          m_SpawnedWallPrefab.transform.SetPositionAndRotation(image.transform.position, image.transform.rotation);
+        }
+      }
 		// image is no longer tracking, disable visuals TrackingState.Limited TrackingState.None
 		else if (image.trackingState == TrackingState.Limited)
 		{
-				m_OneNumberManager.Enable3DNumber(false);
-				m_TwoNumberManager.Enable3DNumber(false);
-				m_ThreeNumberManager.Enable3DNumber(false);
-				m_FourNumberManager.Enable3DNumber(false);
+				m_OneNumberManager.EnableARVideoObj(false);
+				m_TwoNumberManager.EnableARVideoObj(false);
+				m_ThreeNumberManager.EnableARVideoObj(false);
+				m_FourNumberManager.EnableARVideoObj(false);
+        m_WallNumberManager.EnableARVideoObj(false);
 
-				//if (image.referenceImage.guid == s_FirstImageGUID)
-				//{
-				//	m_OneNumberManager.Enable3DNumber(false);
-				//	Destroy(m_SpawnedOnePrefab);
-				//}
-				//else if (image.referenceImage.guid == s_SecondImageGUID)
-				//{
-				//	m_TwoNumberManager.Enable3DNumber(false);
-				//	Destroy(m_SpawnedTwoPrefab);
-				//}
-				//else if (image.referenceImage.guid == s_ThirdImageGUID)
-				//{
-				//	m_ThreeNumberManager.Enable3DNumber(false);
-				//}
-				//else if (image.referenceImage.guid == s_FourthImageGUID)
-				//{
-				//	m_FourNumberManager.Enable3DNumber(false);
-				//}
-			}
+        //if (image.referenceImage.guid == s_FirstImageGUID)
+        //{
+        //	m_OneNumberManager.EnableARVideoObj(false);
+        //	Destroy(m_SpawnedOnePrefab);
+        //}
+        //else if (image.referenceImage.guid == s_SecondImageGUID)
+        //{
+        //	m_TwoNumberManager.EnableARVideoObj(false);
+        //	Destroy(m_SpawnedTwoPrefab);
+        //}
+        //else if (image.referenceImage.guid == s_ThirdImageGUID)
+        //{
+        //	m_ThreeNumberManager.EnableARVideoObj(false);
+        //}
+        //else if (image.referenceImage.guid == s_FourthImageGUID)
+        //{
+        //	m_FourNumberManager.EnableARVideoObj(false);
+        //}
+      }
 		}
 	
         
@@ -284,7 +318,11 @@ public class ImageTrackingObjectManager : MonoBehaviour
 			{
 				Destroy(m_SpawnedFourPrefab);
 			}
-		}
+      else if (image.referenceImage.guid == s_WallImageGUID)
+      {
+        Destroy(m_SpawnedWallPrefab);
+      }
+    }
 
  }
 

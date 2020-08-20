@@ -25,7 +25,7 @@ public class NumberManager : MonoBehaviour
         m_Constraint.AddSource(m_Source);
     }
 
-    public void Enable3DNumber(bool enable)
+    public void EnableARVideoObj(bool enable)
     {
         m_NumberObject.SetActive(enable);
     }
