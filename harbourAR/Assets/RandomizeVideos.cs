@@ -10,6 +10,7 @@ public class RandomizeVideos : MonoBehaviour
    public VideoClip[] videos;
 
   public GameObject rootOfPrefab;
+  private GameObject quadParent;
 
 
   private List<int> videosPlayed;
@@ -18,7 +19,10 @@ public class RandomizeVideos : MonoBehaviour
 
   private int currentVideo;
 
- private VideoPlayer videoPlayer;
+  private VideoPlayer videoPlayer;
+
+  public Vector3 arWallPositionTweaks;
+  public Vector3 arWallScaleTweaks;
   // Start is called before the first frame update
   void Start()
   {
@@ -38,6 +42,12 @@ public class RandomizeVideos : MonoBehaviour
     currentVideo = GetNextARVideoIndex();
     videoPlayer.clip = videos[currentVideo];
 
+    quadParent = transform.parent.gameObject;
+
+    float coordinateX = quadParent.transform.position.x;
+    float coordinateY = quadParent.transform.position.y;
+    float coordinateZ = quadParent.transform.position.z;
+    quadParent.transform.Translate(coordinateX + arWallPositionTweaks.x, coordinateY + arWallPositionTweaks.y, coordinateZ + arWallPositionTweaks.z);
 
   }
 

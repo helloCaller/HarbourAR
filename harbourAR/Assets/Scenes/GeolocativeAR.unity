@@ -639,7 +639,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1, y: -0.00003171297, z: 0.0222689, w: 6.106666e-10}
+  m_BoundingSphereOverride: {x: 0, y: 8.3e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -779,20 +779,33 @@ MonoBehaviour:
         Altitude: 0
         AltitudeMode: 0
   HotspotSettings:
-    Prefab: {fileID: 6211779150993235216, guid: ca07f411eec51443797f21420efabe7e,
+    Prefab: {fileID: 4064896583439209759, guid: 658fffa13f0434cc09214901f0eb5dd7,
       type: 3}
     PositionMode: 1
     ActivationRadius: 10
     AlignToCamera: 1
     DistanceFromCamera: 15
   DebugMode: 0
-  UseOnLeaveHotspotEvent: 0
+  UseOnLeaveHotspotEvent: 1
   OnHotspotActivated:
     m_PersistentCalls:
       m_Calls: []
   OnHotspotLeave:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3382640121864487716, guid: 658fffa13f0434cc09214901f0eb5dd7,
+          type: 3}
+        m_TargetAssemblyTypeName: HotspotExit, Assembly-CSharp
+        m_MethodName: MakeItGoAway
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1043394382
 Transform:
   m_ObjectHideFlags: 0
@@ -981,7 +994,7 @@ MonoBehaviour:
         Altitude: 0
         AltitudeMode: 0
   HotspotSettings:
-    Prefab: {fileID: 6952170631448695672, guid: 060c39e02716e4ebbb583a5753874b2f,
+    Prefab: {fileID: 8714195999802668486, guid: e761d1faf8dd04eb18c4f43843213e0b,
       type: 3}
     PositionMode: 1
     ActivationRadius: 12
@@ -1080,6 +1093,7 @@ GameObject:
   - component: {fileID: 1269487179}
   - component: {fileID: 1269487178}
   - component: {fileID: 1269487177}
+  - component: {fileID: 1269487181}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -1190,6 +1204,66 @@ Transform:
   m_Father: {fileID: 858923954}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269487181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269487175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1269487180}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &1467401207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,13 +1954,25 @@ MonoBehaviour:
     AlignToCamera: 1
     DistanceFromCamera: 3
   DebugMode: 0
-  UseOnLeaveHotspotEvent: 0
+  UseOnLeaveHotspotEvent: 1
   OnHotspotActivated:
     m_PersistentCalls:
       m_Calls: []
   OnHotspotLeave:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1790412574
 Transform:
   m_ObjectHideFlags: 0
