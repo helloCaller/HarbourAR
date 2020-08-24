@@ -1,0 +1,4 @@
+1f0288c01730459b9c384ae64b82da0f|Assets/Resources/images/AR images/changchunCoast.jpg|0.4
+01d2887df9c24cfa84022cbe49b6cdbf|Assets/Resources/images/AR images/ICEcrack.jpg|0.4
+8b68e7a2e9f94d30bbd9971631c890c8|Assets/Resources/images/AR images/WaterRush.jpg|0.51
+2ee443232af44926806791132e3bcfdf|Assets/Resources/images/AR images/WindowGold.jpg|0.4
