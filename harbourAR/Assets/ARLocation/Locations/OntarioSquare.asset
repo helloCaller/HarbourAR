@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: OntarioSquare
   m_EditorClassIdentifier: 
   Location:
-    Latitude: 43.6389816
-    Longitude: -79.3822017
+    Latitude: 43.6389881
+    Longitude: -79.3821859
     Altitude: 0
     AltitudeMode: 0
     Label: 

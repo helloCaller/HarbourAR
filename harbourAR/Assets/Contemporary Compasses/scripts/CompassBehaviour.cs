@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class CompassBehaviour : MonoBehaviour {
 
-  public TextMeshPro headingText;
+  //public TextMeshPro headingText;
   private bool startTracking = false;
 
   private float currentLatitude;
@@ -42,18 +42,18 @@ public class CompassBehaviour : MonoBehaviour {
 
   void Update() {
 		//print(currentDistanceToDestination(currentLatitude, currentLongitude, destinationLatitude, destinationLongitude));
-	changeSceneNearDestination(currentDistanceToDestination(currentLatitude, currentLongitude, destinationLatitude, destinationLongitude));
+	//changeSceneNearDestination(currentDistanceToDestination(currentLatitude, currentLongitude, destinationLatitude, destinationLongitude));
 
 
 	if (startTracking) {
       currentLatitude = Input.location.lastData.latitude;
       currentLongitude = Input.location.lastData.longitude;
-	  print(currentDistanceToDestination(currentLatitude, currentLongitude, destinationLatitude, destinationLongitude));
+	  
 	  float bearing = angleFromCoordinate(currentLatitude, currentLongitude, destinationLatitude, destinationLongitude);
 			
 	  transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, Input.compass.magneticHeading + bearing), 100f);
       //transform.rotation = Quaternion.Euler(0, 0, Input.compass.trueHeading);
-      headingText.text = ((int)Input.compass.trueHeading).ToString() + "° " + DegreesToCardinalDetailed(Input.compass.trueHeading);
+      //headingText.text = ((int)Input.compass.trueHeading).ToString() + "° " + DegreesToCardinalDetailed(Input.compass.trueHeading);
     }
   }
 
@@ -67,20 +67,20 @@ public class CompassBehaviour : MonoBehaviour {
     return caridnals[(int)Math.Round(((double)degrees * 10 % 3600) / 225)];
   }
 
-  private float currentDistanceToDestination(float currentLat, float currentLong, float destinationLat, float destinationLong){
-		float latSquare = Mathf.Pow((destinationLat - currentLat), 2);
-		float longSquare = Mathf.Pow((destinationLong - currentLong), 2);
-		return Mathf.Sqrt(latSquare + longSquare);
+  //private float currentDistanceToDestination(float currentLat, float currentLong, float destinationLat, float destinationLong){
+		//float latSquare = Mathf.Pow((destinationLat - currentLat), 2);
+		//float longSquare = Mathf.Pow((destinationLong - currentLong), 2);
+		//return Mathf.Sqrt(latSquare + longSquare);
 
-  }
+  //}
 
-  private void changeSceneNearDestination (float dist) {
-		float allowance = 0.0005f;
-        if (dist <= allowance) {
-			SceneManager.LoadScene("MainAR");
-		}
+  //private void changeSceneNearDestination (float dist) {
+		//float allowance = 0.0005f;
+  //      if (dist <= allowance) {
+		//	SceneManager.LoadScene("MainAR");
+		//}
 		
-  }
+  //}
 
 
 }
