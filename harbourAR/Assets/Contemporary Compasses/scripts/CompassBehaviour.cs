@@ -13,8 +13,8 @@ public class CompassBehaviour : MonoBehaviour {
   private float currentLatitude;
   private float currentLongitude;
 
-  private float destinationLatitude = 43.6388981f;
-  private float destinationLongitude = -79.3821843f;
+  private float destinationLatitude = 43.6389881f;
+  private float destinationLongitude = -79.3821859f;
 
 
   private float angleFromCoordinate(float lat1, float long1, float lat2, float long2)
