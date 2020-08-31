@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5424488171940219930
+  m_GuidHigh: 9148545862498111423
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5419485387450120098
+      m_GuidHigh: 12543150465964192641
+    m_SerializedTextureGuid:
+      m_GuidLow: 3748710156569979323
+      m_GuidHigh: 3564955040869848043
+    m_Size: {x: 0.5, y: 0.4}
+    m_SpecifySize: 1
+    m_Name: TrackedImage1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5559695836671080490
+      m_GuidHigh: 13569121998256970405
+    m_SerializedTextureGuid:
+      m_GuidLow: 4965626323979710429
+      m_GuidHigh: 16861170500483439673
+    m_Size: {x: 0.5, y: 0.4}
+    m_SpecifySize: 1
+    m_Name: TrackedImage2
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5288290284984094612
+      m_GuidHigh: 911456777279105717
+    m_SerializedTextureGuid:
+      m_GuidLow: 6057367239500276904
+      m_GuidHigh: 10490272886984972793
+    m_Size: {x: 0.5, y: 0.4}
+    m_SpecifySize: 1
+    m_Name: ICEcrack
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4683862879196277817
+      m_GuidHigh: 13284475478511311236
+    m_SerializedTextureGuid:
+      m_GuidLow: 17585896231648796405
+      m_GuidHigh: 4714840443184417848
+    m_Size: {x: 0.5, y: 0.4}
+    m_SpecifySize: 1
+    m_Name: WindowGold
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5705080863657205084
+      m_GuidHigh: 18198004874516328880
+    m_SerializedTextureGuid:
+      m_GuidLow: 10720225859682956966
+      m_GuidHigh: 12177669272842297960
+    m_Size: {x: 5.4864, y: 2.3439422}
+    m_SpecifySize: 1
+    m_Name: ppwall-v1
+    m_Texture: {fileID: 0}
