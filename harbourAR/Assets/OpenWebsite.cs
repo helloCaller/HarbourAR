@@ -11,7 +11,7 @@ public class OpenWebsite : MonoBehaviour
   public void GoToWebAR()
   {
     
-      Application.OpenURL("https://us-west-2.sumerian.aws/d332cd2b86db4905b2827b85090702a0.scene");
+      Application.OpenURL("https://adelheid.ca/lotx");
 
 
   }

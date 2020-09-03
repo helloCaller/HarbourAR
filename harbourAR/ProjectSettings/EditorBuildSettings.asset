@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/compass.unity
-    guid: daf8b0b1bc9c54c49891d7d388c64ff6
+    path: Assets/Scenes/Welcome.unity
+    guid: 9b773dfd976424851ac87343979f6e37
   - enabled: 1
     path: Assets/Scenes/GeolocativeAR.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

@@ -1,0 +1,5 @@
+086277a2e13f4b3581331270e43812ae|Assets/ARFoundationDemos2/ImageTracking/TrackedImages/WaterRush.jpg|0.5
+2bff782a01e84d28a59a0bac90344fbc|Assets/ARFoundationDemos2/ImageTracking/TrackedImages/changchunCoast.jpg|0.5
+e1a04f94c7fe4963b5ead71d1c25a60c|Assets/ARFoundationDemos2/ImageTracking/TrackedImages/ICEcrack.jpg|0.5
+f321ec396c78410084d90d4410f05bb8|Assets/ARFoundationDemos2/ImageTracking/TrackedImages/WindowGold.jpg|0.5
+952a9d5c84d14f2cb0715f26044d8cfc|Assets/ARFoundationDemos2/ImageTracking/TrackedImages/ppwall-v1.jpg|5.4864
