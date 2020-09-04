@@ -59,9 +59,9 @@ MonoBehaviour:
       m_GuidLow: 5705080863657205084
       m_GuidHigh: 18198004874516328880
     m_SerializedTextureGuid:
-      m_GuidLow: 10720225859682956966
-      m_GuidHigh: 12177669272842297960
-    m_Size: {x: 5.4864, y: 2.3439422}
+      m_GuidLow: 15316022502693937452
+      m_GuidHigh: 33413504551172024
+    m_Size: {x: 5.4864, y: 2.118074}
     m_SpecifySize: 1
     m_Name: ppwall-v1
     m_Texture: {fileID: 0}
