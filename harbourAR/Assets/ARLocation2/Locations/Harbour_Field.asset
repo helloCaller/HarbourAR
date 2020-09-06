@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Harbour_Field
   m_EditorClassIdentifier: 
   Location:
-    Latitude: 43.638749
-    Longitude: -79.381523
+    Latitude: 43.6388258
+    Longitude: -79.3814306
     Altitude: 0
     AltitudeMode: 0
     Label: 
