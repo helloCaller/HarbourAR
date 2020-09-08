@@ -39,7 +39,7 @@ public class RandomizeVideos : MonoBehaviour
     {
       videosUnplayed.Add(i);
     }
-
+   
     currentVideo = GetNextARVideoIndex();
     videoPlayer.clip = videos[currentVideo];
 
