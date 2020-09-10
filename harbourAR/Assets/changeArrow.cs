@@ -8,7 +8,7 @@ public class changeArrow : MonoBehaviour
 
   public void ChangeArrow()
   {
-    StartCoroutine(Rotate(Vector3.forward, 180, 0.1f));
+    StartCoroutine(Rotate(Vector3.forward, 270, 0.5f));
   }
 
   IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
