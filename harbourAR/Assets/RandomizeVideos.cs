@@ -62,18 +62,21 @@ public class RandomizeVideos : MonoBehaviour
 
   void OnVideoClipEnd(VideoPlayer player)
   {
-    videosUnplayed.Remove(currentVideo);
-    videosPlayed.Add(currentVideo);
+    
+      videosUnplayed.Remove(currentVideo);
+      videosPlayed.Add(currentVideo);
 
-    if(videosPlayed.Count == videos.Length)
-    {
-      Destroy(rootOfPrefab);
-    } else
-    {
-      currentVideo = GetNextARVideoIndex();
-      videoPlayer.clip = videos[currentVideo];
-      StartCoroutine(PlayAfterDelay(3));
-    }
+      if (videosPlayed.Count == videos.Length - 3)
+      {
+        Destroy(rootOfPrefab);
+      }
+      else
+      {
+        currentVideo = GetNextARVideoIndex();
+        videoPlayer.clip = videos[currentVideo];
+        StartCoroutine(PlayAfterDelay(3));
+      }
+     
   }
 
   IEnumerator PlayAfterDelay(int delayInSeconds)

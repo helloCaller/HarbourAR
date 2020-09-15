@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: OntarioSquareCorridor
   m_EditorClassIdentifier: 
   Location:
-    Latitude: 43.6388908
-    Longitude: -79.3817494
+    Latitude: 43.6388942
+    Longitude: -79.381962
     Altitude: 0
     AltitudeMode: 0
     Label: 

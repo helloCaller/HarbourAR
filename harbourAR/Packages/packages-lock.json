@@ -94,7 +94,7 @@
       }
     },
     "com.unity.xr.arcore": {
-      "version": "3.1.4",
+      "version": "3.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
