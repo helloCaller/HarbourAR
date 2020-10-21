@@ -6,9 +6,9 @@ public class changeArrow : MonoBehaviour
 {
   private bool isFacingUp;
 
-  public void ChangeArrow()
+  public void Update()
   {
-    StartCoroutine(Rotate(Vector3.forward, 270, 0.5f));
+    StartCoroutine(Rotate(Vector3.forward, 360, 0.5f));
   }
 
   IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)

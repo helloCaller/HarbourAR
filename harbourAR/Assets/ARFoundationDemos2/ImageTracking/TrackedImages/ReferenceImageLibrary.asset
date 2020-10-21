@@ -19,8 +19,8 @@ MonoBehaviour:
       m_GuidLow: 5419485387450120098
       m_GuidHigh: 12543150465964192641
     m_SerializedTextureGuid:
-      m_GuidLow: 15296949116870021393
-      m_GuidHigh: 1129559649530543642
+      m_GuidLow: 4915557420603445916
+      m_GuidHigh: 16426568295065054827
     m_Size: {x: 0.56, y: 0.44814116}
     m_SpecifySize: 1
     m_Name: TrackedImage1
@@ -29,8 +29,8 @@ MonoBehaviour:
       m_GuidLow: 5559695836671080490
       m_GuidHigh: 13569121998256970405
     m_SerializedTextureGuid:
-      m_GuidLow: 1461455841641681805
-      m_GuidHigh: 11323784594965957435
+      m_GuidLow: 3779435433603767792
+      m_GuidHigh: 5034815006003526265
     m_Size: {x: 0.56, y: 0.44814116}
     m_SpecifySize: 1
     m_Name: TrackedImage2
@@ -39,8 +39,8 @@ MonoBehaviour:
       m_GuidLow: 5288290284984094612
       m_GuidHigh: 911456777279105717
     m_SerializedTextureGuid:
-      m_GuidLow: 6096218874610452033
-      m_GuidHigh: 15890088670554148072
+      m_GuidLow: 2630405863153767908
+      m_GuidHigh: 2718954443727634763
     m_Size: {x: 0.56, y: 0.44814116}
     m_SpecifySize: 1
     m_Name: ICEcrack
@@ -49,8 +49,8 @@ MonoBehaviour:
       m_GuidLow: 4683862879196277817
       m_GuidHigh: 13284475478511311236
     m_SerializedTextureGuid:
-      m_GuidLow: 9567054854686685300
-      m_GuidHigh: 13763064543768550299
+      m_GuidLow: 14155871831554948624
+      m_GuidHigh: 11436008851362527963
     m_Size: {x: 0.56, y: 0.44814116}
     m_SpecifySize: 1
     m_Name: WindowGold
